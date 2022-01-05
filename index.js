@@ -10,8 +10,8 @@ const authRoutes = require('./Routes/auth');
 //MongoDB Connection
 db.connect(process.env.DB_CONNECT_URL, () => {
     console.log("Connected to DB!.......");
-}).catch(() => {
-    console.log("Connection failed !.......");
+}).catch((err) => {
+    console.log("Connection failed !......." + err);
 });
 
 // Middlewares
